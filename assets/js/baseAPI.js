@@ -10,7 +10,7 @@ $.ajaxPrefilter(function (options) {
     }
      // 全局同一挂载complete回调函数
      options.complete = function (res) {
-        console.log(res);
+       
         // 在complete回调函数中，可以使用res.responseJSON
         if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
             localStorage.removeItem('token')
